@@ -1,7 +1,7 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
-    Database_URL: str
+    DATABASE_URL: str
     SECRET_KEY: str
     ALGORITHM: str
     EXPIRE_TIME: int
