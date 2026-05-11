@@ -11,7 +11,10 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # use * for now, restrict later
+    allow_origins=[
+        "http://localhost:5173",
+        "https://jobboard-frontend-bk4o.onrender.com"
+    ],    
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
