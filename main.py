@@ -123,7 +123,7 @@ def delete_job(id: int, db: Session = Depends(get_db),current_company:int = Depe
 def update_job_status(id: int, db: Session = Depends(get_db),current_company:int = Depends(get_current_company)):
     return update_active_jobs_to_inactive(id, db, current_company.id)
 
-@app.post("/jobs/{id}/apply", response_model=schemas.ApplicationInformation, status_code=201)
+@app.post("/jobs/{id}/apply", response_model=ApplicationInformation, status_code=201)
 async def job_apply(
     id: int,
     background_tasks: BackgroundTasks,
