@@ -8,7 +8,6 @@ from typing import List
 import shutil
 import os
 import httpx
-import asyncio
 import models
 from fastapi.staticfiles import StaticFiles
 
