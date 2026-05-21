@@ -36,6 +36,12 @@ class Applicant(Base):
     cv_path = Column(String, nullable=True)
     status=Column(String)
     created_at=Column(DateTime)
+    ai_score = Column(Integer, nullable=True)
+    ai_qualifications = Column(String, nullable=True)
+    ai_job_history = Column(String, nullable=True)
+    ai_skill_set = Column(String, nullable=True)
+    ai_justification = Column(String, nullable=True)
+    ai_analyzed = Column(Boolean, default=False)
 
 
 class Admin(Base):

@@ -103,7 +103,20 @@ class ApplicationInformation(BaseModel):
     cv_path: str | None = None
     status: str
     created_at: datetime
+    ai_score: int | None = None
+    ai_qualifications: str | None = None
+    ai_job_history: str | None = None
+    ai_skill_set: str | None = None
+    ai_justification: str | None = None
+    ai_analyzed: bool = False
+
+class AIAnalysisResult(BaseModel):
+    applicant_id: int
+    score: int
+    qualifications: str
+    job_history: str
+    skill_set: str
+    justification: str
 
     class Config:
         from_attributes = True
-
